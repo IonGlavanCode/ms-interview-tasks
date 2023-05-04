@@ -4,3 +4,34 @@
 
 
 2. Напишите запрос, отыскивающий неуникальные значения id в таблице CREATE TABLE (id int not null, name text);
+# 1.Проверка скобок
+
+Простой PHP-скрипт для проверки корректности баланса скобок в арифметическом выражении.
+
+## Требования
+
+- PHP
+
+## Установка
+
+1. Клонируйте репозиторий или скачайте исходный код.
+2. Убедитесь, что у вас установлен PHP.
+
+## Использование
+
+1. Откройте файл `index.php` в веб-браузере или выполните его из командной строки.
+2. Скрипт выведет "Верно" или "Не верно" в зависимости от входного выражения.
+
+## Пример
+
+```php
+require_once 'BracketBalanceChecker.php';
+
+$checker = new BracketBalanceChecker();
+
+$correctExpression = "[({})]";
+echo $checker->isBalanced($correctExpression); // Вывод: "Correct"
+
+$incorrectExpression = "[([)";
+echo $checker->isBalanced($incorrectExpression); // Вывод: "Incorrect"
+```
