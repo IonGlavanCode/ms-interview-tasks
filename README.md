@@ -35,3 +35,11 @@ echo $checker->isBalanced($correctExpression); // Вывод: "Correct"
 $incorrectExpression = "[([)";
 echo $checker->isBalanced($incorrectExpression); // Вывод: "Incorrect"
 ```
+# 2. Запрос
+
+```sql
+SELECT id, COUNT(id) as count
+FROM users
+GROUP BY id
+HAVING count > 1;
+```
